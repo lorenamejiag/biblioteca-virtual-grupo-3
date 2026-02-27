@@ -1,12 +1,7 @@
-import java.util.List;
+package com.grupo3.bibliotecavirtual.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import java.util.List;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,12 +22,10 @@ public class Perfil {
   private String direccion;
   private String telefono;
 
-  @OneToOne
-    @JoinColumn(name = "usuario_id", unique = true
-        private Usuario usuario;
-    )
+    @OneToOne(mappedBy = "perfil") // Nombre del atributo en Usuario
+    private Usuario usuario;
 
     @OneToMany(mappedBy = "perfil")
-private List<Prestamo> prestamos;
+    private List<Prestamo> prestamos;
 
 }

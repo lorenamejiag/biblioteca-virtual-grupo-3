@@ -1,4 +1,4 @@
-package com.grupo3.bibliotecavirtual.model;
+package com.grupo3.bibliotecavirtual.model.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
