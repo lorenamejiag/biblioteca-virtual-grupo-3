@@ -13,11 +13,10 @@ import java.time.LocalDate;
 public class Libro extends BaseEntity {
 
 
-    private String nombrelibro;
+    private String nombreLibro;
 
-    private int cantidadpaginas;
+    private int cantidadPaginas;
 
-    private LocalDate fechamodificacion;
 
     // Muchos libros a un autor
     @ManyToOne
