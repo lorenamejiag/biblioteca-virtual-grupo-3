@@ -19,7 +19,7 @@ public class AutorServiceImpl implements AutorService {
 
     @Override
     public Autor guardarAutor(Autor autor) {
-        return null;
+        return autorRepository.save(autor);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class AutorServiceImpl implements AutorService {
     public void eliminarAutor(Long id) {
         Autor autor = buscarPorId(id);
         if (autor != null) {
-            autorRepository.save(autor);
+            autorRepository.delete(autor);
         }
     }
 }
